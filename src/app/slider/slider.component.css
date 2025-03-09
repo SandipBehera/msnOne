@@ -1,0 +1,102 @@
+.carousel-item-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item-wrapper img {
+    width: 100%;
+    height: 100vh;
+    /* Full-screen height */
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Black overlay with 60% opacity */
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-caption h3,
+.carousel-caption p {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: white;
+    /* Ensure text is visible on dark overlay */
+}
+
+/* Color Changing & Pulse Animation */
+@keyframes colorPulse {
+    0% {
+      color: #ff4d4d; /* Red */
+      transform: scale(1);
+      text-shadow: 0 0 5px #ff4d4d;
+    }
+    25% {
+      color: #ffbb33; /* Orange */
+      transform: scale(1.05);
+      text-shadow: 0 0 10px #ffbb33;
+    }
+    50% {
+      color: #33cc33; /* Green */
+      transform: scale(1);
+      text-shadow: 0 0 5px #33cc33;
+    }
+    75% {
+      color: #3399ff; /* Blue */
+      transform: scale(1.05);
+      text-shadow: 0 0 10px #3399ff;
+    }
+    100% {
+      color: #ff4d4d; /* Back to Red */
+      transform: scale(1);
+      text-shadow: 0 0 5px #ff4d4d;
+    }
+  }
+  
+  /* Apply animation to text */
+  .color-pulse {
+    animation: colorPulse 3s infinite ease-in-out;
+    font-weight: bold;
+  }
+  
+  /* Add delay to paragraph */
+  .delay {
+    animation-delay: 0.5s;
+  }
+  /* Pulse Animation */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1); /* Slightly grow */
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animation to text */
+  .pulse-text {
+    animation: pulse 2s infinite ease-in-out;
+    font-weight: bold;
+  }
+  

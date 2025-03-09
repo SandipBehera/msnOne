@@ -1,0 +1,38 @@
+<div class="contact-form-container">
+    <h2 class="title">Contact Us</h2>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" class="form-control" />
+        <small *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched" class="error">
+          Name is required (min 3 characters)
+        </small>
+      </div>
+  
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" class="form-control" />
+        <small *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched" class="error">
+          Enter a valid email address
+        </small>
+      </div>
+  
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" formControlName="phone" class="form-control" />
+        <small *ngIf="contactForm.controls['phone'].invalid && contactForm.controls['phone'].touched" class="error">
+          Enter a valid 10-digit phone number
+        </small>
+      </div>
+  
+      <button type="submit" [disabled]="contactForm.invalid || loading" class="btn btn-primary"> 
+        <span *ngIf="!loading">Submit</span>
+        <span *ngIf="loading" class="spinner"></span>
+      </button>
+    </form>
+  </div>
+  
