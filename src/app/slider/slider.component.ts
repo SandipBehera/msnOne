@@ -23,10 +23,10 @@ export class SliderComponent {
       this.ismobile = window.innerWidth <= 768;
     }
     console.log('ismobile', this.ismobile);
-    // this.VisitorTrackerService.logVisitor('msnone-neopolis.com').subscribe({
-    //   next: (res) => console.log('Visitor logged', res),
-    //   error: (err) => console.error('Error logging visitor:', err)
-    // });
+    this.VisitorTrackerService.logVisitor('msnone-neopolis.com').subscribe({
+      next: (res) => console.log('Visitor logged', res),
+      error: (err) => console.error('Error logging visitor:', err)
+    });
   }
 
   open(title: string) {
