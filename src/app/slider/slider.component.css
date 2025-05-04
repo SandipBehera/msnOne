@@ -1,7 +1,11 @@
 .carousel-item-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-item-wrapper img {
@@ -18,85 +22,122 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
     /* Black overlay with 60% opacity */
 }
 
-.centered-text {
+
+  .carousel-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     z-index: 2;
-    color: white;
-    text-align: center;
     width: 100%;
-}
-
-.carousel-caption h3,
-.carousel-caption p {
-    font-family: 'Playfair Display', Georgia, serif;
+    display: flex;
+    justify-content: flex-end; /* Places card on the right */
+    padding: 0 5%;
+  }
+  
+  .property-card {
+    max-width: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 60px;
+    position: relative;
+    font-family: "Playfair Display,Georgia,serif";
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: "Playfair Display,Georgia,serif";
+  }
+  
+  .location {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    align-items: center;
+  }
+  
+  .location i {
+    margin-right: 8px;
+    color: gray;
+  }
+  
+  .rera {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  
+  .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bhk h3,
+  .price h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .bhk p,
+  .price p {
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: #5c0e1f;
     color: white;
-    /* Ensure text is visible on dark overlay */
-}
-
-/* Color Changing & Pulse Animation */
-@keyframes colorPulse {
-    0% {
-      color: #ff4d4d; /* Red */
-      transform: scale(1);
-      text-shadow: 0 0 5px #ff4d4d;
-    }
-    25% {
-      color: #ffbb33; /* Orange */
-      transform: scale(1.05);
-      text-shadow: 0 0 10px #ffbb33;
-    }
-    50% {
-      color: #33cc33; /* Green */
-      transform: scale(1);
-      text-shadow: 0 0 5px #33cc33;
-    }
-    75% {
-      color: #3399ff; /* Blue */
-      transform: scale(1.05);
-      text-shadow: 0 0 10px #3399ff;
-    }
-    100% {
-      color: #ff4d4d; /* Back to Red */
-      transform: scale(1);
-      text-shadow: 0 0 5px #ff4d4d;
-    }
-  }
-  
-  /* Apply animation to text */
-  .color-pulse {
-    animation: colorPulse 3s infinite ease-in-out;
+    padding: 12px;
+    font-size: 1rem;
     font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
   }
   
-  /* Add delay to paragraph */
-  .delay {
-    animation-delay: 0.5s;
-  }
-  /* Pulse Animation */
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.1); /* Slightly grow */
-      opacity: 0.8;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  .cta-btn:hover {
+    background: #450a17;
   }
   
-  /* Apply animation to text */
-  .pulse-text {
-    animation: pulse 2s infinite ease-in-out;
-    font-weight: bold;
+  .vector-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('../../../public/img/Vector.webp') no-repeat center;
+    background-size: contain;
+    opacity: 0.2;
+    background-color: brown;
   }
   
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .carousel-content {
+      justify-content: center; /* Center card for mobile */
+    }
+    
+    .property-card {
+      max-width: 90%;
+    }
+  }

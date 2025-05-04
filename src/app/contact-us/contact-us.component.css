@@ -68,4 +68,32 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+  .hero-section {
+    background-image: url('../../../public/property_img/prop11.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
+  .overlay-content {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-section {
+      height: auto;
+    }
+    .overlay-content {
+      padding: 0.5rem;
+    }
+    
+  }

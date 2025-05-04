@@ -1,15 +1,38 @@
 <ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
     <ng-template ngbSlide>
       <div class="carousel-item-wrapper">
-        <img src="../img/banner.png" alt="Random first slide" />
+        <img src="../property_img/top_view.png" alt="Random first slide" />
   
         <!-- Black Overlay -->
-        <div class="overlay"></div>
+        <div class="overlay" [style.display]="ismobile ? 'none' : 'absolute'"></div>
   
         <!-- Centered Text Content -->
-        <div class="carousel-caption centered-text">
-          <h3 style="margin-top: 9rem;" class="pulse-text">MSN One &#64;Neoplis</h3>
-          <p class="pulse-text delay">Where Luxury Life Blends With Serenity</p>
+        <div class="carousel-content" [style.display]="ismobile ? 'none' : 'absolute'">
+          <div class="property-card">
+            <div class="card-content">
+              <h2>ONE By MSN</h2>
+              <p class="location">
+                <mat-icon>map</mat-icon>Kokapet, Hyderabad
+              </p>
+              <p class="rera">RERA Registration No: <span>HMDA & RERA received , launching soon</span></p>
+  
+              <hr />
+  
+              <div class="details">
+                <div class="bhk">
+                  <h3>4 BHK</h3>
+                  <p>Luxury Apartments</p>
+                </div>
+                <div class="price">
+                  <h3>₹ 6.60 Cr*</h3>
+                  <p>Onwards*</p>
+                </div>
+              </div>
+  
+              <button class="cta-btn" (click)="open('Get Price Breakdown')">Get Price Breakdown</button>
+            </div>
+            <div class="vector-bg"></div>
+          </div>
         </div>
       </div>
     </ng-template>

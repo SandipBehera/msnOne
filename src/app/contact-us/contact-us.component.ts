@@ -2,12 +2,13 @@ import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ServiceService } from '../service.service';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
 @Component({
   selector: 'app-contact-us',
-  imports: [ReactiveFormsModule, NgIf],
+  imports: [ReactiveFormsModule, NgIf,MatIconModule],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })
