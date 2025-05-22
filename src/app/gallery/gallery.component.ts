@@ -14,64 +14,64 @@ import { ModalComponent } from '../modal/modal.component';
 export class GalleryComponent {
   images = [
     {
-      thumbnail: 'property_img/prop1.png',
-      full: 'property_img/prop1.png',
+      thumbnail: 'property_img/prop1.webp',
+      full: 'property_img/prop1.webp',
       alt: 'Table Full of Spices',
     },
     {
-      thumbnail: 'property_img/prop11.png',
-      full: 'property_img/prop11.png',
+      thumbnail: 'property_img/prop11.webp',
+      full: 'property_img/prop11.webp',
       alt: 'Place Royale Bruxelles',
     },
     {
-      thumbnail: 'property_img/prop3.png',
-      full: 'property_img/prop3.png',
+      thumbnail: 'property_img/prop3.webp',
+      full: 'property_img/prop3.webp',
       alt: 'View of the City in the Mountains',
     },
     {
-      thumbnail: 'property_img/prop4.png',
-      full: 'property_img/prop4.png',
+      thumbnail: 'property_img/prop4.webp',
+      full: 'property_img/prop4.webp',
       alt: 'Place Royale Bruxelles',
     },
     {
-      thumbnail: 'property_img/prop5.png',
-      full: 'property_img/prop5.png',
+      thumbnail: 'property_img/prop5.webp',
+      full: 'property_img/prop5.webp',
       alt: 'Place Royale Bruxelles',
     },
     {
-      thumbnail: 'property_img/prop6.png',
-      full: 'property_img/prop6.png',
+      thumbnail: 'property_img/prop6.webp',
+      full: 'property_img/prop6.webp',
       alt: 'Place Royale Bruxelles',
     },
     {
-      thumbnail: 'property_img/prop7.png',
-      full: 'property_img/prop7.png',
+      thumbnail: 'property_img/prop7.webp',
+      full: 'property_img/prop7.webp',
       alt: 'Table Full of Spices',
     },
     {
-      thumbnail: 'property_img/prop8.png',
-      full: 'property_img/prop8.png',
+      thumbnail: 'property_img/prop8.webp',
+      full: 'property_img/prop8.webp',
       alt: 'Winter Landscape',
     },
     {
-      thumbnail: 'property_img/prop9.png',
-      full: 'property_img/prop9.png',
+      thumbnail: 'property_img/prop9.webp',
+      full: 'property_img/prop9.webp',
       alt: 'View of the City in the Mountains',
     },
     {
-      thumbnail: 'property_img/prop10.png',
-      full: 'property_img/prop10.png',
+      thumbnail: 'property_img/prop10.webp',
+      full: 'property_img/prop10.webp',
       alt: 'Place Royale Bruxelles',
     },
     
     {
-      thumbnail: 'property_img/prop12.png',
-      full: 'property_img/prop12.png',
+      thumbnail: 'property_img/prop12.webp',
+      full: 'property_img/prop12.webp',
       alt: 'Place Royale Bruxelles',
     },
     {
-      thumbnail: 'property_img/top_view.png',
-      full: 'property_img/top_view.png',
+      thumbnail: 'property_img/top_view.webp',
+      full: 'property_img/top_view.webp',
       alt: 'Winter Landscape',
     },
   ];
