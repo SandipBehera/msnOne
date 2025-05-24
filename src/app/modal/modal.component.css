@@ -41,4 +41,9 @@
   button.btn-light:hover {
     background-color: #f8f8f8;
   }
+  .error{
+    color: #f7f1f1;
+    font-size: 14px;
+    margin-top: 5px;
+  }
   

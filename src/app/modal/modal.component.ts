@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { User } from '../user';
 import { NgIf } from '@angular/common';
 import { ServiceService } from '../service.service';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -13,6 +14,9 @@ import { ServiceService } from '../service.service';
 })
 export class ModalComponent {
   @Input() title: string = 'Enquiry Now';
+  @Input() show = false;
+  @Output() close = new EventEmitter<void>();
+
   myForm:UntypedFormGroup|any;
   loading = false;
   @Input() user:User={name:'',email:'',phone:'', projectName:'MSN One'};
