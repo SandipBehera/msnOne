@@ -3,4 +3,5 @@ export interface User {
     email: string;
     phone: string;
     projectName: string;
+  website_name: string;
   }
