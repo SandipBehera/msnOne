@@ -21,7 +21,8 @@ export class ContactUsComponent {
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
-      projectName: ['MSN One' ]
+      projectName: ['MSN One' ],
+      website_name:['msnone-neopolis.com']
     });
   }
 
