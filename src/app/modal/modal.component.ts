@@ -26,7 +26,7 @@ export class ModalComponent {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       projectName: ['MSN One' ],
-      website_name: ['msnone-neopolis.com']
+      website_name: 'msnone-neopolis.com'
     })
   }
   
