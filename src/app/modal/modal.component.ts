@@ -19,14 +19,14 @@ export class ModalComponent {
 
   myForm:UntypedFormGroup|any;
   loading = false;
-  @Input() user:User={name:'',email:'',phone:'', projectName:'MSN One'};
+  @Input() user:User={name:'',email:'',phone:'', projectName:'MSN One', website_name:'msnone-neopolis.com'};
   constructor(public activeModal: NgbActiveModal,private formbuilder:UntypedFormBuilder,private ServiceService: ServiceService) {
     this.myForm=this.formbuilder.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       projectName: ['MSN One' ],
-      website_name: 'msnone-neopolis.com'
+      website_name: ['msnone-neopolis.com']
     })
   }
   
